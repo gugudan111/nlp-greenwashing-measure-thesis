@@ -1,0 +1,18 @@
+=== GWI 测度构建实验结果摘要 ===
+样本：句子 1320 条，企业 120 家，行业 8 个
+监督分量（多项式朴素贝叶斯，5折CV）：句子级 AUC=0.993, AP=0.986
+三分量收敛（Pearson r）：dict-ml=0.965, dict-emb=0.989, ml-emb=0.981
+外部效度（综合 GWI 与代理变量相关）：
+  GWI ~ penalty_intensity : r=0.638
+  GWI ~ env_score        : r=-0.712
+  GWI ~ latent_g         : r=0.818
+分量与 penalty 相关：dict=0.644, ml=0.621, emb=0.634
+判别效度：高GWI组证据密度=3.833 vs 低GWI组=6.567, Welch t=-13.77 (|t|大, p<0.001)
+=== 描述性统计（企业层，标准化后）===
+  GWI_dict: mean=0.355 sd=0.250 min=0.000 median=0.323 max=1.000
+  GWI_ml: mean=0.384 sd=0.246 min=0.000 median=0.375 max=1.000
+  GWI_emb: mean=0.392 sd=0.234 min=0.000 median=0.365 max=1.000
+  GWI: mean=0.377 sd=0.241 min=0.000 median=0.354 max=1.000
+=== 预测效度回归（OLS, 单变量）===
+  Penalty = 0.380 + 3.887*GWI   (t=8.99, R2=0.407)
+  EnvScore= 96.779 + -50.656*GWI   (t=-11.02, R2=0.507)

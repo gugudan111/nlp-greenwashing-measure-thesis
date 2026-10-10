@@ -1,0 +1,6 @@
+numpy>=1.24
+matplotlib>=3.6
+jieba>=0.42
+# 说明：python-pptx 仅在本作业"读取课程 PPT"时用到，复现测度流程无需安装。
+# 课程推荐工具链（可选，本演示以纯 NumPy 实现 NB 与 OLS 以降低门槛）：
+# scikit-learn, gensim, scipy, statsmodels, pandas
